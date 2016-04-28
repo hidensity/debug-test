@@ -1,7 +1,19 @@
 <?php
 
-require_once __DIR__ . '/../vendor/autoload.php';
+define('PROJECT_BASE_DIR', realpath('../'));
+set_include_path(get_include_path() . PATH_SEPARATOR . PROJECT_BASE_DIR);
 
-$app = new Silex\Application();
+try {
+    require 'vendor/autoload.php';
 
-$app->run();
+    $app = new Dbb\App();
+
+    require 'config/di.php';
+    require 'config/routing.php';
+
+    $app->run();
+} catch (\Exception $e) {
+    //for debugging
+    ini_set('display_errors', 1);
+    throw $e;
+}

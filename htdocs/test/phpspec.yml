@@ -1,0 +1,10 @@
+formatter.name: pretty
+bootstrap: phpspec-bootstrap.php
+
+suites:
+  app:
+    namespace: Dbb
+    psr4_prefix: Dbb
+    spec_prefix: spec\
+    src_path: ../app
+    spec_path: ../test

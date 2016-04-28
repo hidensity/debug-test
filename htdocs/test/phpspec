@@ -1,0 +1,9 @@
+#!/usr/bin/env php
+<?php
+
+define('PHPSPEC_VERSION', '2.5.0');
+
+require __DIR__ . '/../vendor/autoload.php';
+
+$app = new PhpSpec\Console\Application(PHPSPEC_VERSION);
+$app->run();
