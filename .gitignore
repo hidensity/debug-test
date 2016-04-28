@@ -1,0 +1,5 @@
+/.idea
+/htdocs/vendor
+/logs
+/composer.lock
+/composer.phar
