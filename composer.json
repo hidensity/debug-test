@@ -2,6 +2,11 @@
   "config": {
     "vendor-dir": "htdocs/vendor"
   },
+  "autoload": {
+    "psr-4": {
+      "Dbb\\": "htdocs/app"
+    }
+  },
   "require": {
     "php": ">=7.0.0",
     "silex/silex": "~1.3"
